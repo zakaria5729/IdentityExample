@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Identity</string>
+    <string name="enter_your_nid">Enter your NID number</string>
+    <string name="next">Next</string>
+    <string name="call_api">Call Api</string>
+    <string name="take_image">Take Image</string>
+</resources>
