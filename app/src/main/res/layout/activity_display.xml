@@ -1,9 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".ui.DisplayActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="300dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="104dp" />
+
+        <TextView
+            android:id="@+id/faceMatched"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Face Matched:"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userImageView" />
+
+        <TextView
+            android:id="@+id/matchPercentage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Matched (%):"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/faceMatched" />
+
+        <TextView
+            android:id="@+id/nameBn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matchPercentage" />
+
+        <TextView
+            android:id="@+id/nameEn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name (EN):"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameBn" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEn" />
+
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth:"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+        <TextView
+            android:id="@+id/fatherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Father Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+        <TextView
+            android:id="@+id/motherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mother Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fatherName" />
+
+        <TextView
+            android:id="@+id/faceMatchedTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Face Matched:"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/faceMatched"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userImageView" />
+
+        <TextView
+            android:id="@+id/matchPercentageTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Matched Percentage:"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/matchPercentage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/faceMatchedTV" />
+
+        <TextView
+            android:id="@+id/nameBnTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/nameBn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/matchPercentageTV" />
+
+        <TextView
+            android:id="@+id/nameEnTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name (EN):"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/nameEn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameBnTV" />
+
+        <TextView
+            android:id="@+id/genderTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEnTV" />
+
+        <TextView
+            android:id="@+id/dobTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth:"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/dob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderTV" />
+
+        <TextView
+            android:id="@+id/fatherNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Father Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/fatherName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dobTV" />
+
+        <TextView
+            android:id="@+id/motherNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Mother Name:"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/motherName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fatherNameTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

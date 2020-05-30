@@ -2,6 +2,8 @@
     <string name="app_name">Identity</string>
     <string name="enter_your_nid">Enter your NID number</string>
     <string name="next">Next</string>
-    <string name="call_api">Call Api</string>
+    <string name="call_api">Verify User</string>
     <string name="take_image">Take Image</string>
+    <string name="enter_your_date_of_birth">Enter your Date of Birth</string>
+    <string name="pick_date_of_birth">Pick Date of Birth</string>
 </resources>

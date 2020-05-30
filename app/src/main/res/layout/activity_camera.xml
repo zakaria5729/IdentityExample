@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.CameraActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"
+        tools:targetApi="lollipop" />
+
     <ImageView
         android:id="@+id/preViewImageView"
         android:layout_width="match_parent"
@@ -30,6 +43,7 @@
         android:text="@string/take_image"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
+        android:backgroundTint="@color/colorPurple"
         android:layout_margin="12dp"
         app:layout_constraintBottom_toTopOf="@+id/callApiButton"
         app:layout_constraintEnd_toEndOf="parent"
